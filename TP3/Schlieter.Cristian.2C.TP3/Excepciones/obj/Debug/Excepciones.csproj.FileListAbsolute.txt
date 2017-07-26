@@ -1,0 +1,4 @@
+C:\Users\nahuel\Desktop\TP3\Schlieter.Cristian.2C.TP3\Excepciones\bin\Debug\Excepciones.dll
+C:\Users\nahuel\Desktop\TP3\Schlieter.Cristian.2C.TP3\Excepciones\bin\Debug\Excepciones.pdb
+C:\Users\nahuel\Desktop\TP3\Schlieter.Cristian.2C.TP3\Excepciones\obj\Debug\Excepciones.dll
+C:\Users\nahuel\Desktop\TP3\Schlieter.Cristian.2C.TP3\Excepciones\obj\Debug\Excepciones.pdb

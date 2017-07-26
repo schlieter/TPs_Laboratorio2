@@ -1,0 +1,7 @@
+C:\Users\nahuel\Desktop\TP3\Schlieter.Cristian.2C.TP3\Archivos\obj\Debug\Archivos.csprojResolveAssemblyReference.cache
+C:\Users\nahuel\Desktop\TP3\Schlieter.Cristian.2C.TP3\Archivos\bin\Debug\Archivos.dll
+C:\Users\nahuel\Desktop\TP3\Schlieter.Cristian.2C.TP3\Archivos\bin\Debug\Archivos.pdb
+C:\Users\nahuel\Desktop\TP3\Schlieter.Cristian.2C.TP3\Archivos\bin\Debug\Excepciones.dll
+C:\Users\nahuel\Desktop\TP3\Schlieter.Cristian.2C.TP3\Archivos\bin\Debug\Excepciones.pdb
+C:\Users\nahuel\Desktop\TP3\Schlieter.Cristian.2C.TP3\Archivos\obj\Debug\Archivos.dll
+C:\Users\nahuel\Desktop\TP3\Schlieter.Cristian.2C.TP3\Archivos\obj\Debug\Archivos.pdb

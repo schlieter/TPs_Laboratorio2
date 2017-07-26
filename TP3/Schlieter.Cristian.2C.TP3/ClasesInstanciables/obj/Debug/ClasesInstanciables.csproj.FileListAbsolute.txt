@@ -1,0 +1,11 @@
+C:\Users\nahuel\Desktop\TP3\Schlieter.Cristian.2C.TP3\ClasesInstanciables\obj\Debug\ClasesInstanciables.csprojResolveAssemblyReference.cache
+C:\Users\nahuel\Desktop\TP3\Schlieter.Cristian.2C.TP3\ClasesInstanciables\bin\Debug\ClasesInstanciables.dll
+C:\Users\nahuel\Desktop\TP3\Schlieter.Cristian.2C.TP3\ClasesInstanciables\bin\Debug\ClasesInstanciables.pdb
+C:\Users\nahuel\Desktop\TP3\Schlieter.Cristian.2C.TP3\ClasesInstanciables\bin\Debug\Archivos.dll
+C:\Users\nahuel\Desktop\TP3\Schlieter.Cristian.2C.TP3\ClasesInstanciables\bin\Debug\EntidadesAbstractas.dll
+C:\Users\nahuel\Desktop\TP3\Schlieter.Cristian.2C.TP3\ClasesInstanciables\bin\Debug\Excepciones.dll
+C:\Users\nahuel\Desktop\TP3\Schlieter.Cristian.2C.TP3\ClasesInstanciables\bin\Debug\Archivos.pdb
+C:\Users\nahuel\Desktop\TP3\Schlieter.Cristian.2C.TP3\ClasesInstanciables\bin\Debug\EntidadesAbstractas.pdb
+C:\Users\nahuel\Desktop\TP3\Schlieter.Cristian.2C.TP3\ClasesInstanciables\bin\Debug\Excepciones.pdb
+C:\Users\nahuel\Desktop\TP3\Schlieter.Cristian.2C.TP3\ClasesInstanciables\obj\Debug\ClasesInstanciables.dll
+C:\Users\nahuel\Desktop\TP3\Schlieter.Cristian.2C.TP3\ClasesInstanciables\obj\Debug\ClasesInstanciables.pdb
