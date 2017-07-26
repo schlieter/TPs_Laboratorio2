@@ -1,0 +1,12 @@
+F:\c#\SchlieterCristian\TP1(Calculadora)\bin\Debug\ConsoleApplication2.exe.config
+F:\c#\SchlieterCristian\TP1(Calculadora)\bin\Debug\ConsoleApplication2.exe
+F:\c#\SchlieterCristian\TP1(Calculadora)\bin\Debug\ConsoleApplication2.pdb
+F:\c#\SchlieterCristian\TP1(Calculadora)\obj\Debug\ConsoleApplication2.exe
+F:\c#\SchlieterCristian\TP1(Calculadora)\obj\Debug\ConsoleApplication2.pdb
+F:\c#\SchlieterCristian\TP1(Calculadora)\obj\Debug\TP1(Calculadora).csprojResolveAssemblyReference.cache
+E:\c#\SchlieterCristian\TP1(Calculadora)\bin\Debug\ConsoleApplication2.exe.config
+E:\c#\SchlieterCristian\TP1(Calculadora)\bin\Debug\ConsoleApplication2.exe
+E:\c#\SchlieterCristian\TP1(Calculadora)\bin\Debug\ConsoleApplication2.pdb
+E:\c#\SchlieterCristian\TP1(Calculadora)\obj\Debug\TP1(Calculadora).csprojResolveAssemblyReference.cache
+E:\c#\SchlieterCristian\TP1(Calculadora)\obj\Debug\ConsoleApplication2.exe
+E:\c#\SchlieterCristian\TP1(Calculadora)\obj\Debug\ConsoleApplication2.pdb
