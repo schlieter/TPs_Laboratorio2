@@ -24,6 +24,7 @@ namespace TP1WFA_Calculadora_
             InitializeComponent();
             this.txtNumero1.Text = miNumero1.numero.ToString();
             this.txtNumero2.Text = miNumero2.numero.ToString();
+            this.cmbOperacion.Text = "+";
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
