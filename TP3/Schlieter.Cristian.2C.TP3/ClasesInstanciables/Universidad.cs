@@ -17,12 +17,55 @@ namespace ClasesInstanciables
         private List<Profesor> _profesores;
         private List<Jornada> _jornada;
 
-        public enum EClases { Legislacion, Programacion, Laboratorio,  SPD, }
+        public enum EClases 
+        { 
+            Legislacion, Programacion, Laboratorio,  SPD, 
+        }
 
-        public List<Alumno> Alumnos { get { return this._alumnos; } set { this._alumnos = value; } }
-        public List<Profesor> Instructores { get { return this._profesores; } set { this._profesores = value; } }
-        public List<Jornada> Jornadas { get { return this._jornada; } set { this._jornada = value; } }
-        public Jornada this[int i] { get { return this._jornada[i]; } set { this._jornada[i] = value; } }
+        public List<Alumno> Alumnos 
+        { 
+            get 
+            { 
+                return this._alumnos; 
+            } 
+            set 
+            { 
+                this._alumnos = value; 
+            } 
+        }
+        public List<Profesor> Instructores 
+        { 
+            get 
+            { 
+                return this._profesores; 
+            } 
+            set 
+            { 
+                this._profesores = value; 
+            } 
+        }
+        public List<Jornada> Jornadas 
+        { 
+            get 
+            { 
+                return this._jornada; 
+            } 
+            set 
+            { 
+                this._jornada = value; 
+            } 
+        }
+        public Jornada this[int i] 
+        { 
+            get 
+            { 
+                return this._jornada[i]; 
+            } 
+            set 
+            { 
+                this._jornada[i] = value; 
+            } 
+        }
 
         public Universidad()
         {
@@ -34,14 +77,14 @@ namespace ClasesInstanciables
         {
             Universidad u;
             Xml<Universidad> xml = new Xml<Universidad>();
-            xml.Leer(@"C:\Users\nahuel\Desktop\TP3\Universidad.xml", out u);
+            xml.Leer(AppDomain.CurrentDomain.BaseDirectory + "Universidad.xml", out u);
             return u;
 
         }
         public static bool Guardar(Universidad gim)
         {
             Xml<Universidad> xml = new Xml<Universidad>();
-            return xml.Guardar(@"C:\Users\nahuel\Desktop\TP3\Universidad.xml", gim);
+            return xml.Guardar(AppDomain.CurrentDomain.BaseDirectory + "Universidad.xml", gim);
         }
         private static string MostrarDatos(Universidad gim)
         {
@@ -70,7 +113,12 @@ namespace ClasesInstanciables
         }
         public static bool operator ==(Universidad g, Alumno a)
         {
-            return g._alumnos.Contains(a);
+            foreach (Alumno b in g._alumnos)
+            {
+                if (b == a)
+                    return true;
+            }
+            return false;
         }
         public static Profesor operator ==(Universidad g, EClases clase)
         {
@@ -83,7 +131,12 @@ namespace ClasesInstanciables
         }
         public static bool operator ==(Universidad g, Profesor i)
         {
-            return g._profesores.Contains(i);
+            foreach (Profesor p in g._profesores)
+            {
+                if (p == i)
+                    return true;
+            }
+            return false;
         }
         public static bool operator !=(Universidad g, Alumno a)
         {

@@ -15,9 +15,39 @@ namespace ClasesInstanciables
         private Universidad.EClases _clase;
         private Profesor _instructor;
 
-        public List<Alumno> Alumnos { get { return this._alumnos; } set { this._alumnos = value; } }
-        public Universidad.EClases Clase { get { return this._clase; } set { this._clase = value; } }
-        public Profesor Instructor { get { return this._instructor; } set { this._instructor = value; } }
+        public List<Alumno> Alumnos 
+        { 
+            get 
+            { 
+                return this._alumnos; 
+            } 
+            set 
+            { 
+                this._alumnos = value; 
+            } 
+        }
+        public Universidad.EClases Clase 
+        { 
+            get 
+            { 
+                return this._clase; 
+            } 
+            set 
+            { 
+                this._clase = value; 
+            } 
+        }
+        public Profesor Instructor 
+        { 
+            get 
+            { 
+                return this._instructor; 
+            } 
+            set 
+            { 
+                this._instructor = value; 
+            } 
+        }
 
         private Jornada()
         {
@@ -33,18 +63,23 @@ namespace ClasesInstanciables
         public static bool Guardar(Jornada jornada)
         {
             Texto t = new Texto();
-            return t.Guardar(@"C:\Users\nahuel\Desktop\TP3\Jornada.txt", jornada.ToString());
+            return t.Guardar(AppDomain.CurrentDomain.BaseDirectory + "Jornada.txt", jornada.ToString());
         }
         public static string Leer()
         {
             string s;
             Texto t = new Texto();
-            t.Leer(@"C:\Users\nahuel\Desktop\TP3\Jornada.txt", out s);
+            t.Leer(AppDomain.CurrentDomain.BaseDirectory + "Jornada.txt", out s);
             return s;
         }
         public static bool operator ==(Jornada j, Alumno a)
         {
-            return j._alumnos.Contains(a);
+            foreach (Alumno b in j._alumnos)
+            {
+                if (b == a)
+                    return true;
+            }
+            return false;
         }
         public static bool operator !=(Jornada j, Alumno a)
         {
@@ -55,12 +90,12 @@ namespace ClasesInstanciables
             if (j != a)
             {
                 j._alumnos.Add(a);
+                return j;
             }
             else
             {
                 throw new AlumnoRepetidoException();
             }
-            return j;
         }
         public override string ToString()
         {

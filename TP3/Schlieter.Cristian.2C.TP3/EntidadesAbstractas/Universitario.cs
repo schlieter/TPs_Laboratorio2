@@ -20,7 +20,10 @@ namespace EntidadesAbstractas
 
         protected virtual string MostrarDatos()
         {
-            return base.ToString() + " Legajo: " + this._legajo.ToString();
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine(base.ToString());
+            sb.Append("Legajo: " + this._legajo.ToString());
+            return sb.ToString();
         }
         
         protected abstract string ParticiparEnClase();

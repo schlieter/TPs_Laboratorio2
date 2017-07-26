@@ -12,7 +12,10 @@ namespace ClasesInstanciables
         private Universidad.EClases _claseQueToma;
         private EEstadoCuenta _estadoCuenta;
 
-        public enum EEstadoCuenta { AlDia, Deudor, Becado }
+        public enum EEstadoCuenta 
+        { 
+            AlDia, Deudor, Becado 
+        }
 
         public Alumno() : base() { }
         public Alumno(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad, Universidad.EClases claseQueToma)
@@ -27,11 +30,17 @@ namespace ClasesInstanciables
         }
         protected override string ParticiparEnClase()
         {
-            return "TOMA CLASE DE " + this._claseQueToma.ToString();
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine("TOMA CLASE DE " + this._claseQueToma.ToString());
+            return sb.ToString();
         }
         protected override string MostrarDatos()
         {
-            return base.MostrarDatos() + "\n" + this._estadoCuenta.ToString() + "\n " + this.ParticiparEnClase() + "\n ";
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine(base.MostrarDatos());
+            sb.AppendLine(this._estadoCuenta.ToString());
+            sb.AppendLine(this.ParticiparEnClase());
+            return sb.ToString();
         }
         public override string ToString()
         {

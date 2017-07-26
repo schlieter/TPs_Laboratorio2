@@ -16,20 +16,60 @@ namespace EntidadesAbstractas
 
         public enum ENacionalidad { Argentino, Extranjero }
 
-        public string Apellido { get { return this._apellido; } set { this._apellido = this.ValidarNombreApellido(value); } }
-        public string Nombre { get { return this._nombre; } set { this._nombre = this.ValidarNombreApellido(value); } }
-        public int DNI { get { return this._dni; } set { this._dni = this.ValidarDni(this.Nacionalidad, value); } }
-        public ENacionalidad Nacionalidad { get { return this._nacionalidad; } set { this._nacionalidad = value; } }
-        public string StringToDNI { set { this._dni = this.ValidarDni(this.Nacionalidad, value); } }
+        public string Apellido
+        { 
+            get 
+            { 
+                return this._apellido; 
+            } 
+            set 
+            { 
+                this._apellido = this.ValidarNombreApellido(value); 
+            } 
+        }
+        public string Nombre 
+        { 
+            get 
+            { 
+                return this._nombre; 
+            } 
+            set 
+            { 
+                this._nombre = this.ValidarNombreApellido(value); 
+            } 
+        }
+        public int DNI 
+        { 
+            get 
+            { 
+                return this._dni; 
+            } 
+            set 
+            { 
+                this._dni = this.ValidarDni(this.Nacionalidad, value); 
+            } 
+        }
+        public ENacionalidad Nacionalidad 
+        {
+            get 
+            { 
+                return this._nacionalidad; 
+            } 
+            set 
+            {
+                this._nacionalidad = value;
+            }
+        }
+        public string StringToDNI 
+        { 
+            set 
+            { 
+                this._dni = this.ValidarDni(this.Nacionalidad, value);
+            } 
+        }
 
         public Persona() { }
 
-        /// <summary>
-        /// Constructor v2.
-        /// </summary>
-        /// <param name="nombre"></param>
-        /// <param name="apellido"></param>
-        /// <param name="nacionalidad"></param>
         public Persona(string nombre, string apellido, ENacionalidad nacionalidad)
             : this()
         {
@@ -38,26 +78,12 @@ namespace EntidadesAbstractas
             this._nacionalidad = nacionalidad;
         }
 
-        /// <summary>
-        /// Constructor v3, llama al constructor v2.
-        /// </summary>
-        /// <param name="nombre"></param>
-        /// <param name="apellido"></param>
-        /// <param name="dni"></param>
-        /// <param name="nacionalidad"></param>
         public Persona(string nombre, string apellido, int dni, ENacionalidad nacionalidad)
             : this(nombre, apellido, nacionalidad)
         {
             this.DNI = dni;
         }
 
-        /// <summary>
-        /// Constructor v4, llama al constructor v2.
-        /// </summary>
-        /// <param name="nombre"></param>
-        /// <param name="apellido"></param>
-        /// <param name="dni"></param>
-        /// <param name="nacionalidad"></param>
         public Persona(string nombre, string apellido, string dni, ENacionalidad nacionalidad)
             : this(nombre, apellido, nacionalidad)
         {
@@ -66,15 +92,14 @@ namespace EntidadesAbstractas
 
         public override string ToString()
         {
-            return "Nombre: " + this.Nombre + " Apellido: " + this.Apellido + " Nacionalidad: " + this.Nacionalidad.ToString() + " DNI: " + this.DNI.ToString();
+            StringBuilder sb = new StringBuilder();
+            sb.Append("Nombre: " + this.Nombre);
+            sb.AppendLine(" Apellido: " + this.Apellido);
+            sb.AppendLine("Nacionalidad: " + this.Nacionalidad.ToString());
+            sb.Append("DNI: " + this.DNI.ToString());
+            return sb.ToString();
         }
 
-        /// <summary>
-        /// Valida que el dni coincida con la nacionalidad.
-        /// </summary>
-        /// <param name="nacionalidad"></param>
-        /// <param name="dato"></param>
-        /// <returns>Retorna el dni validado, caso contrario lanza una excepcion</returns>
         private int ValidarDni(ENacionalidad nacionalidad, int dato)
         {
             if (nacionalidad == ENacionalidad.Argentino && (dato < 1 || dato > 89999999))
@@ -91,12 +116,6 @@ namespace EntidadesAbstractas
             }
         }
 
-        /// <summary>
-        /// Valida que el dni coincida con la nacionalidad.
-        /// </summary>
-        /// <param name="nacionalidad"></param>
-        /// <param name="dato"></param>
-        /// <returns>Retorna el dni validado, caso contrario lanza una excepcion</returns>
         private int ValidarDni(ENacionalidad nacionalidad, string dato)
         {
             int dni;
@@ -110,11 +129,6 @@ namespace EntidadesAbstractas
             }
         }
 
-        /// <summary>
-        /// Valida que el nonbre o apellido tenga caracteres validos.
-        /// </summary>
-        /// <param name="dato"></param>
-        /// <returns>Retorna la cadena validada, caso contrario retorna null</returns>
         private string ValidarNombreApellido(string dato)
         {
             foreach (char l in dato)

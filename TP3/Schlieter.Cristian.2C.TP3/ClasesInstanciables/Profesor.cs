@@ -38,11 +38,19 @@ namespace ClasesInstanciables
         }
         protected override string MostrarDatos()
         {
-            return base.MostrarDatos() + "\n" + this.ParticiparEnClase();
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine(base.MostrarDatos());
+            sb.AppendLine(this.ParticiparEnClase());
+            return sb.ToString();
         }
         public static bool operator ==(Profesor i, Universidad.EClases clase)
         {
-            return i._clasesDelDia.Contains(clase);
+            foreach (Universidad.EClases c in i._clasesDelDia)
+            {
+                if (c == clase)
+                    return true;
+            }
+            return false;
         }
         public static bool operator !=(Profesor i, Universidad.EClases clase)
         {
