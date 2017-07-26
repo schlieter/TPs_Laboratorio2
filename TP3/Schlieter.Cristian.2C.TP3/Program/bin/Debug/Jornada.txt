@@ -1,0 +1,18 @@
+Laboratorio
+Nombre: Juan Apellido: Lopez
+Nacionalidad: Argentino
+DNI: 12234456
+Legajo: 1
+CLASES DEL DIA 
+Laboratorio
+SPD
+
+
+Nombre: Joaquin Apellido: Suarez
+Nacionalidad: Extranjero
+DNI: 91122456
+Legajo: 7
+AlDia
+TOMA CLASE DE Laboratorio
+
+
